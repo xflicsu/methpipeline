@@ -20,26 +20,33 @@ First step---Downlad & install bwameth from [bwameth](https://github.com/brentp/
 Second step---Prepare index
 -----
 ```
-bwameth.py index $REFERENCE (genome fasta file)
+bwameth.py index $ref (genome fasta file)
 ```
 
 Third step---Align
 -----
 ```
-bwameth.py --threads 16 --prefix $PREFIX --reference $REFERENCE $fq1 $fq2
+bwameth.py --threads 16 --prefix $PREFIX --reference $ref $fq1 $fq2
 ```
 Additionally, you can get SNP from BS-Seq by [BisSNP](https://sourceforge.net/projects/bissnp/) 
 
 Fourth step---call methylation & SNP
 -----
 ```
-bwameth.py tabulate --map-q 5 --bissnp $BisSNP --prefix outprefix -t 12 --nome --reference $REFERENCE $PREFIX.bam
+bwameth.py tabulate --map-q 5 --bissnp $BisSNP --prefix outprefix -t 12 --nome --reference $ref $PREFIX.bam
 ```
 Then, you can get methylation infromation from the outprefix.meth.bed file and SNP information from outprefix.snp.vcf files respectively.
 
 
 A example: 
 -----
+list.bak
+```
+16N
+16T
+17N
+17T
+```
 ```
 indir=/panfs/home/VIP/maofb/lxf/data/Oesophagus/
 ref=/panfs/home/VIP/maofb/lxf/DB/genome/hg19/bwameth/hg19.fa
