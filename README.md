@@ -38,7 +38,7 @@ bwameth.py tabulate --map-q 5 --bissnp $BisSNP --prefix outprefix -t 12 --nome -
 Then, you can get methylation infromation from the outprefix.meth.bed file and SNP information from outprefix.snp.vcf files respectively.
 
 
-A example: 
+An example: 
 -----
 list.bak
 ```
@@ -47,6 +47,7 @@ list.bak
 17N
 17T
 ```
+shell command of PBS (qsub)
 ```
 indir=/panfs/home/VIP/maofb/lxf/data/Oesophagus/
 ref=/panfs/home/VIP/maofb/lxf/DB/genome/hg19/bwameth/hg19.fa
