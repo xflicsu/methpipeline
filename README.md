@@ -3,7 +3,7 @@ methpipeline based on bwameth
 
 # steps
 
-first step---downlad & install bwameth from [bwameth]https://github.com/brentp/bwa-meth
+First step---downlad & install bwameth from [bwameth](https://github.com/brentp/bwa-meth)
 -----
 ```Shell
     # these 4 lines are only needed if you don't have toolshed installed
@@ -18,22 +18,23 @@ first step---downlad & install bwameth from [bwameth]https://github.com/brentp/b
     sudo python setup.py install
 ```
 
-second step---prepare index
+Second step---prepare index
 -----
 ```
 bwameth.py index $REFERENCE
 ```
 
-third step---Align
+Third step---Align
 -----
 
     bwameth.py --threads 16 \
          --reference $REFERENCE \
          $FQ1 $FQ2 > some.sam
 
-Additionally, you can get SNP from BS-Seq by [BisSNP]https://sourceforge.net/projects/bissnp/ 
+Additionally, you can get SNP from BS-Seq by [BisSNP](https://sourceforge.net/projects/bissnp/) 
 
-fourth step---call methylation & SNP
+Fourth step---call methylation & SNP
+-----
 ```
 bwameth.py tabulate --map-q 5 --bissnp $BisSNP --prefix outprefix -t 12 --nome --reference $REFERENCE $PREFIX.bam
 ```
