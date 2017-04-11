@@ -1,7 +1,8 @@
 # methpipeline
-methpipeline based on bwameth
+methpipeline based on bwameth & swDMR
+Call methylation & Identify DMR from multiple samples
 
-# steps
+# Steps--call DNA methylation level
 First step---Downlad & install bwameth from [bwameth](https://github.com/brentp/bwa-meth)
 -----
 ```Shell
@@ -73,3 +74,16 @@ bwameth.py tabulate --map-q 5 --bissnp $BisSNP --prefix $i -t 12 --nome --refere
         qsub $i.sh
 done
 ```
+# Steps--Identify DMR from multiple samples
+First---Download & install [swDMR](https://github.com/xflicsu/swdmr) 
+-----
+```
+>cd /path/of/swDMR----- Go to path of swDMR software installed
+>tar xzvf swDMR-xxx.tar.gz
+>cd swDMR-xxx
+>sh install
+```
+Second---Prepare files for [swDMR](https://github.com/xflicsu/swdmr)
+-----
+Third----DMR detection with [swDMR](https://github.com/xflicsu/swdmr)
+-----
