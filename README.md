@@ -2,7 +2,7 @@
 methpipeline based on bwameth & swDMR
 Call methylation & Identify DMR from multiple samples
 
-# Steps--call DNA methylation level
+# Steps--Call DNA methylation level
 First step---Downlad & install [bwameth](https://github.com/brentp/bwa-meth)
 -----
 ```Shell
